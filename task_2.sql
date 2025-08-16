@@ -1,14 +1,13 @@
 -- task_2.sql
 -- Script to create tables for alx_book_store
 
--- Use the database
 CREATE DATABASE IF NOT EXISTS ALX_BOOK_STORE;
 USE ALX_BOOK_STORE;
 
 -- Authors table
 CREATE TABLE IF NOT EXISTS AUTHORS (
     author_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    author_name VARCHAR(100) NOT NULL,
     bio TEXT
 );
 
@@ -51,4 +50,3 @@ CREATE TABLE IF NOT EXISTS ORDER_DETAILS (
     FOREIGN KEY (order_id) REFERENCES ORDERS(order_id),
     FOREIGN KEY (book_id) REFERENCES BOOKS(book_id)
 );
-
